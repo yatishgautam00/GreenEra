@@ -1,0 +1,106 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock %}
+<!-- content -->
+{% block content %}
+
+<div class="img-prediction">
+  <div class="prediction-box">
+    <div class="img-select-box">
+      <div class="img-select-title">Potato Disease Classifier</div>
+      <div class="dividerbypx"></div>
+      <form action="/prediction" method="post" enctype="multipart/form-data" id="myForm">
+        <div class="img-select-file-choose">
+          <input
+            type="file"
+            name="file"
+            class="form-control"
+            aria-describedby="basic-addon2"
+            required
+            id="fileInput"
+          />
+          <label for="fileInput" class="file-label"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+          <label for="fileInput" class="file-label1">Choose a Image</label>
+        </div>
+        <div class="img-select-button"><button type="submit" id="predictButton">
+          <div class="img-select-btn">Predict &nbsp;-></div></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="prediction-box " id="result-img-box">
+    <div class="img-select-box">
+      <div class="img-select-title">Selected Image</div>
+      <div class="dividerbypx"></div>
+      {% if input_img %}
+      <img
+        width="300px"
+        height="300px"
+        class="img-fluid"
+        src="{{ url_for('static', filename='uploads/'+input_img) }}"
+      />
+      {% endif %}
+        <div class="img-select-button">
+          <button id="viewSolutionBtn">
+          <div class="img-select-btn">View Solution &nbsp;-></div></button>
+          
+<div id="popupContainer" class="popupContainer">
+  <div id="popupContent" class="popupContent" style="text-align: justify;">
+    <h1 >Solution for Potato Diseases:</h1>
+    <div class="blight">
+    <div class="late-blight">
+  <h2 style="font-weight: 700;">Late Blight</h2>
+  <p style="font-size: 1.15rem; text-align: justify;">Late blight, caused by the fungus Phytophthora infestans, is a devastating disease affecting potato plants. It typically appears as dark, water-soaked lesions on the leaves, stems, and tubers of the plant. To manage late blight:</p>
+  <ul style="text-align: justify;">
+    <li>Apply fungicides according to recommended schedules.</li>
+    <li>Practice good crop rotation to reduce the buildup of disease inoculum.</li>
+    <li>Remove and destroy infected plant material to prevent the spread of the disease.</li>
+    <li>Ensure proper drainage and avoid overhead irrigation to reduce humidity levels.</li>
+    <li>Monitor fields regularly for early signs of disease and take prompt action.</li>
+  </ul>
+</div>
+<div class="early-blight">
+  <h2 style="font-weight: 700;">Early Blight</h2>
+  <p style="font-size: 1.15rem; text-align: justify;">Early blight, caused by the fungus Alternaria solani, is another common disease affecting potato plants. It typically manifests as dark brown lesions with concentric rings on the lower leaves of the plant. To manage early blight:</p>
+  <ul style="text-align: justify;">
+    <li>Practice crop rotation to reduce disease pressure in the soil.</li>
+    <li>Avoid overhead irrigation and water plants at the base to minimize leaf wetness.</li>
+    <li>Apply fungicides preventively, especially during periods of high humidity.</li>
+    <li>Remove and destroy infected plant debris to prevent overwintering of the fungus.</li>
+    <li>Ensure proper spacing between plants to promote air circulation and reduce humidity.</li>
+  </ul>
+</div>
+</div>
+    <button id="closePopupBtn">Close</button>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="prediction-box " id="result-box">
+    <div class="img-result-box">
+      <div class=" img-result-title">Results : </div>
+      
+      <div class="img-result-result">
+        
+        
+          {% if pred_img %}
+          <img
+            class="img-fluid1"
+            src="{{ url_for('static', filename='uploads/'+pred_img) }}"
+          />
+          {% endif %}
+        
+      </div>
+
+    </div>
+    </div>
+  </div>
+
+  
+</div>
+
+
+{% endblock %}
