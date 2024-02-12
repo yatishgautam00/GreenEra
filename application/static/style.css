@@ -1143,8 +1143,8 @@ li {
    .img-result-box{
     
   
-    width: 450px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1160,11 +1160,11 @@ li {
    .img-select-title{
     display: flex;
     width: 100%;
-    height: 90px;
+    height: 70px;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2.3em;
+    font-size: 2.1em;
     font-family: Playfair Display, sans-serif;
 
     background-color: #013108;
@@ -1174,7 +1174,7 @@ li {
    .img-result-title{
     display: flex;
     width: 100%;
-    height: 90px;
+    height: 70px;
     align-items: center;
     justify-content: center;
     color: white;
@@ -1194,7 +1194,7 @@ li {
     position: relative;
     
     /* border: 2px dashed black; */
-    height: 320px;
+    height: 260px;
     padding: 20px;
    }
 
@@ -1210,7 +1210,7 @@ li {
 
    .img-select-btn{
     width: 100%;
-    height: 90px;
+    height: 70px;
     border-radius: 10px;
    }
 
@@ -1233,7 +1233,7 @@ li {
 
   .img-select-button{
     width: 100%;
-    height: 90px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1283,7 +1283,7 @@ li {
   padding-top: 16%;
 }
 .prediction-side-text{
-  width: 450px;
+  width: 400px;
   height: 500px;
   font-size: 1.5rem;
   font-family: Playfair Display, sans-serif;
@@ -1350,7 +1350,7 @@ li {
   border: none;
   padding: 10px 20px;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
@@ -1358,7 +1358,7 @@ li {
 
 #closePopupBtn:hover {
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   background-color: #6df769;
   color: #013108;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
